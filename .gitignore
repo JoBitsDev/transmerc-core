@@ -183,3 +183,4 @@ gradle-app.setting
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/gradle,eclipse,netbeans,macos,java,windows
+nbproject/
