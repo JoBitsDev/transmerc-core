@@ -1,20 +1,18 @@
 package com.transmerc.core.domain;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Warehouse {
 private int id;
 private Address address;
 private String name;
-private ArrayList<Driver> drivers;
-private ArrayList<Vehicle> vehicles;
+private List<Vehicle> vehicles;
 
 
 public Warehouse(Address address, String name) {
-	
 	setAddress(address);
 	setName(name);
-	this.drivers= new ArrayList<Driver>();
 	this.vehicles= new ArrayList<Vehicle>();
 }
 
@@ -23,7 +21,9 @@ public String getName() {
 }
 
 public void setName(String name) {
+	if(!(name.equals("")))
 	this.name = name;
+	else throw new IllegalArgumentException("El almacen debe estar provisto de un nombre por convenio.");
 }
 
 public int getId() {
@@ -34,18 +34,13 @@ public Address getAddress() {
 	return address;
 }
 public void setAddress(Address address) {
+	if(address!=null)
 	this.address = address;
+	else throw new IllegalArgumentException("La direccion del almacen es un campo obligatorio");
 }
 
-public ArrayList<Driver> getDrivers() {
-	return drivers;
-}
 
-public void addDriver(Driver driver) {
-	this.drivers.add(driver);
-}
-
-public ArrayList<Vehicle> getVehicles() {
+public List<Vehicle> getVehicles() {
 	return vehicles;
 }
 

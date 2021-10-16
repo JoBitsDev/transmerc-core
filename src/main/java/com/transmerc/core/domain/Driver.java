@@ -11,13 +11,17 @@ private String password;
 private Address address;
 private String zone;
 private boolean active;
-private Vehicle vehicle;
 
 
 
 
-public Driver(String name, String phone, String userName, String password, Address address, String zone, boolean active,
-		Vehicle vehicle) {
+
+public Driver() {
+	
+}
+
+public Driver(String name, String phone, String userName, String password, Address address, String zone, boolean active
+		) {
 	
 	setName(userName);
 	setPhone(phone);
@@ -26,7 +30,7 @@ public Driver(String name, String phone, String userName, String password, Addre
 	setAddress(address);
 	setZone(zone);
 	setActive(active);
-	setVehicle(vehicle);
+	
 }
 
 public int getId() {
@@ -84,12 +88,7 @@ public boolean isActive() {
 public void setActive(boolean active) {
 	this.active = active;
 }
-public Vehicle getVehicle() {
-	return vehicle;
-}
-public void setVehicle(Vehicle vehicle) {
-	this.vehicle = vehicle;
-}
+
 
 
 

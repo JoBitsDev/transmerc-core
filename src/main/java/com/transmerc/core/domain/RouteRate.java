@@ -11,6 +11,10 @@ public class RouteRate {
 	
 	
 	
+	public RouteRate() {
+		
+	}
+
 	public RouteRate(int costPerKm, float costPerHour, int bareFare) {
 		
 		setCostPerHour(costPerHour);

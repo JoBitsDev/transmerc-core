@@ -9,6 +9,9 @@ public class Restriction {
 	
 	
 	
+	public Restriction() {
+		
+	}
 	public Restriction(int maxOrders, float maxDailyKm, float speedRatio) {
 		
 	    setMaxOrders(maxOrders);

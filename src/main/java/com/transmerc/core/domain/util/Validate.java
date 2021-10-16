@@ -1,8 +1,8 @@
 package com.transmerc.core.domain.util;
 
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 public class Validate {
 
 	//validar solo letras
@@ -26,7 +26,7 @@ public class Validate {
 			return false;
 		}
 	}
-	//validar solo numeros
+	//validar solo alfanumericos
 		public static boolean validarNoSimbolos(String cadena) {
 			 Pattern pat = Pattern.compile("^[\\w]*$");
 		        Matcher mat = pat.matcher(cadena);
@@ -51,5 +51,14 @@ public class Validate {
 		        if(mat.matches())
 		        	return true;
 		        else return false;
+		}
+		//validar url
+		public static boolean validarUrl(String cadena) {
+			Pattern pat =Pattern.compile("^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]");
+			Matcher match= pat.matcher(cadena);
+			if(match.matches())
+				return true;
+			else return false;
+
 		}
 }

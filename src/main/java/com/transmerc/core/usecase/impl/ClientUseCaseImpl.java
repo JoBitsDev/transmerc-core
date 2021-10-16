@@ -11,5 +11,8 @@ import com.transmerc.core.usecase.ClientUseCase;
 
 public class ClientUseCaseImpl extends DefaultCRUDUseCase<Client>
         implements ClientUseCase {
-
+	
+	public void createClient(Client client) {  
+	    
+	}
 }

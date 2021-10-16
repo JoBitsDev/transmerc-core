@@ -1,12 +1,13 @@
 package com.transmerc.core.domain;
 import com.transmerc.core.domain.util.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Company {
 	private int id;
 	private String name;
 	private Address address;
-	private ArrayList<Warehouse> warehouse;
+	private List<Warehouse> warehouse;
 
 	public Company() {
 		
@@ -46,7 +47,7 @@ public class Company {
 		this.address = address;
 	}
 
-	public ArrayList<Warehouse> getWarehouse() {
+	public List<Warehouse> getWarehouse() {
 		return warehouse;
 	}
 

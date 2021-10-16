@@ -13,7 +13,9 @@ import com.transmerc.core.domain.Client;
  * @author Jorge
  */
 public interface ClientUseCase extends CRUDUseCase<Client>{
-    
-    
+    public void createClient(Client client);
+    public void modifyClient(Client client);
+    public Client searchClientById(int id);
+    public boolean deleteClient(int id);
     
 }

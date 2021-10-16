@@ -1,7 +1,7 @@
-plugins {  
+/*plugins {  
     id 'org.javamodularity.moduleplugin' version '1.7.0'
 }
-apply plugin: 'org.javamodularity.moduleplugin'
+apply plugin: 'org.javamodularity.moduleplugin'*/
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
@@ -20,8 +20,9 @@ configurations.all {
     
 repositories {
     jcenter()
-    mavenCentral()
     maven {url = jobitsRepoReadUrl}
+    mavenCentral()
+    
   
 }
 task sourceJar(type: Jar) {

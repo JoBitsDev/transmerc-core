@@ -1,11 +1,12 @@
 package com.transmerc.core.domain;
 import com.transmerc.core.domain.util.*;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 public class Vehicle {
 
 	private int id;
-	private Date startTime;
+	private LocalDate startTime;
 	private int workTime;
 	private float weight;
 	private float volume;
@@ -13,12 +14,20 @@ public class Vehicle {
 	private String carrierCode;
 	private Restriction restriction;
 	private RouteRate routeRate;
+	private Driver driver;
+	private Address depotAddress;
 	
 	
 	
-	
-	public Vehicle(Date startTime, int workTime, float weight, float volume, int pallets, String carrierCode,
-			Restriction restriction, RouteRate routeRate) {
+	public Vehicle() {
+		
+	}
+
+
+
+
+	public Vehicle(LocalDate startTime, int workTime, float weight, float volume, int pallets, String carrierCode,
+			Restriction restriction, RouteRate routeRate, Driver driver, Address depotAddress) {
 		
 		setStartTime(startTime);
 		setWorkTime(workTime);
@@ -28,16 +37,21 @@ public class Vehicle {
 		setCarrierCode(carrierCode);
 		setRestriction(restriction);
 		setRouteRate(routeRate);
+		setDriver(driver);
+		setDepotAddress(depotAddress);
 	}
 
+	
+	
+	
 	public int getId() {
 		return id;
 	}
 
-	public Date getStartTime() {
+	public LocalDate getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Date startTime) {
+	public void setStartTime(LocalDate startTime) {
 		this.startTime = startTime;
 	}
 	public int getWorkTime() {
@@ -91,6 +105,22 @@ public class Vehicle {
 	}
 	public void setRouteRate(RouteRate routeRate) {
 		this.routeRate = routeRate;
+	}
+	public Driver getDriver() {
+		return driver;
+	}
+	public void setDriver(Driver driver) {
+		this.driver = driver;
+	}
+
+	public Address getDepotAddress() {
+		return depotAddress;
+	}
+
+	public void setDepotAddress(Address depotAddress) {
+		if(depotAddress!=null)
+		this.depotAddress = depotAddress;
+		else throw new IllegalArgumentException("El vehiculo debe tener la direccion donde radica");
 	}
 	
 	

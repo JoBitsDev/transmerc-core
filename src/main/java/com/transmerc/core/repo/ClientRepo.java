@@ -13,4 +13,7 @@ import com.transmerc.core.domain.Client;
  * @author Jorge
  */
 public interface ClientRepo extends CRUDRepository<Client>{ 
+	
+	public Client crearCliente();
+		
 }
